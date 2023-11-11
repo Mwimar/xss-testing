@@ -11,9 +11,10 @@
       <section>
         <ol>
           <% for(const comment of comments){ %>
-          <li><%- comment.text %></li>
+          <li><%= comment.text %></li>
           <% } %>
         </ol>
+        <!-- use equal sign when showing user-generated data -->
       </section>
       <section>
         <form action="/discussion/comment" method="POST">
