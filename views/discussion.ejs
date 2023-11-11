@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/head') %>
+  </head>
+  <body>
+    <%- include('includes/header') %>
+    <main>
+      <h1>Discussion</h1>
+
+      <section>
+        <ol>
+          <% for(const comment of comments){ %>
+          <li><%- comment.text %></li>
+          <% } %>
+        </ol>
+      </section>
+      <section>
+        <form action="/discussion/comment" method="POST">
+          <div class="form-control">
+            <label for="comment">Mycomment</label>
+            <textarea name="comment" id="comment" rows="5"></textarea>
+          </div>
+          <button class="btn">send</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
